@@ -6,6 +6,7 @@ const sharedAccessKeyName = pm.getEnvironmentVariable("SharedAccessKeyName");
 
 let url = request.url;
 
+// replace variables in the url
 while(url.indexOf('{{') >= 0) {
     var variableName = url.substring(url.indexOf('{{')+2, url.indexOf('}}'));
     var variableValue = postman.getEnvironmentVariable(variableName);
