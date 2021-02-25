@@ -16,6 +16,7 @@ const token = createSharedAccessToken(url, sharedAccessKeyName, sharedAccessKey)
 
 pm.request.headers.add({key: 'Authorization', value: token }) 
 
+// from https://gist.github.com/gabrieljoelc/eedf956842966c41d47322f5b9e2a121
 function createSharedAccessToken(uri, saName, saKey) {
     if (!uri || !saName || !saKey) {
         throw "Missing required parameter";
